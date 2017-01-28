@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/darkblue"
+    android:id="@+id/pop1">
+
+    <Button
+        android:text="Close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginBottom="206dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:text="Wrong Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/textView3"
+        android:textColor="@color/white"
+        android:layout_above="@+id/correct1"
+        android:layout_alignLeft="@+id/correct1"
+        android:layout_alignStart="@+id/correct1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:id="@+id/correct1"
+        android:textColor="@color/white"
+        android:text="nique ta mère"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

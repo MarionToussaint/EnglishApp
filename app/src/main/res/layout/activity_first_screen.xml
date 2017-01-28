@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/blue"
+    tools:context="com.example.mmtou.englishapp.FirstScreenActivity">
+
+    <Button
+        android:text="Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bEasy"
+        android:layout_alignLeft="@+id/bEasy"
+        android:layout_alignStart="@+id/bEasy"
+        android:layout_marginTop="40dp"
+        android:id="@+id/bMedium"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/darkblue"/>
+
+    <Button
+        android:text="Hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bMedium"
+        android:layout_alignLeft="@+id/bMedium"
+        android:layout_alignStart="@+id/bMedium"
+        android:layout_marginTop="40dp"
+        android:id="@+id/bHard"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/darkblue"/>
+
+    <TextView
+        android:text="English Application"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/english"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="LIST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bHard"
+        android:layout_alignLeft="@+id/bHard"
+        android:layout_alignStart="@+id/bHard"
+        android:layout_marginTop="40dp"
+        android:id="@+id/list"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/darkblue"/>
+
+    <Button
+        android:text="easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:id="@+id/bEasy"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:background="@color/darkblue"
+        android:layout_below="@+id/english"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
