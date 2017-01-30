@@ -7,34 +7,27 @@
     android:background="@color/darkblue"
     android:id="@+id/pop1">
 
-    <Button
-        android:text="Close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginBottom="206dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
-
-    <TextView
-        android:text="Wrong Answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/textView3"
-        android:textColor="@color/white"
-        android:layout_above="@+id/correct1"
-        android:layout_alignLeft="@+id/correct1"
-        android:layout_alignStart="@+id/correct1" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
         android:id="@+id/correct1"
         android:textColor="@color/white"
-        android:text="nique ta mère"
-        android:layout_above="@+id/button2"
+        android:layout_marginTop="27dp"
+        android:textAllCaps="true"
+        android:text="djifjpdjqzpdez"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Close"
+        android:layout_width="50dip"
+        android:layout_height="30dip"
+        android:id="@+id/button2"
+        android:layout_marginTop="43dp"
+        android:textColor="@color/darkblue"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:background="@color/white"
+        android:layout_alignTop="@+id/correct1"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

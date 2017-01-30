@@ -37,6 +37,7 @@ public class Level1EasyActivity extends AppCompatActivity {
     private PopupWindow pw;
     private FloatingActionButton retrn;
     public static String correction;
+    private String message;
 
     private String[][] list = new String[][] {{"be","was","been","être"}, {"have","had","had","avoir"} ,{"do","did","done","faire"},{"go","went","gone","aller"}};
     private String[][] list1 = new String[][] {{"become","became","become","devenir"}, {"begin","began","begun","commencer"} ,{"bring","brought","brought","apporter"},{"build","built","built","construire"}};
@@ -134,8 +135,9 @@ public class Level1EasyActivity extends AppCompatActivity {
                 point ++;
             } else {
                 Toast.makeText(getApplicationContext(), "Wrong Answer", Toast.LENGTH_SHORT).show();
+                correction = ((list[i][0]) + "  |  " + (list[i][1]) + "  |  " + (list[i][2]) + "  |  " + (list[i][3]));
                 showPopup();
-                correction = ("Correction : " + (list[i][0]) + " | " + (list[i][1]) + " | " + (list[i][2]) + " | " + (list[i][3]));
+
             }
             p1.getText().clear();
             pp1.getText().clear();
@@ -146,8 +148,8 @@ public class Level1EasyActivity extends AppCompatActivity {
                 point++;
             } else {
                 Toast.makeText(getApplicationContext(), "Wrong Answer", Toast.LENGTH_SHORT).show();
+                correction = ((list[i][0]) + "  |  " + (list[i][1]) + "  |  " + (list[i][2]) + "  |  " + (list[i][3]));
                 showPopup();
-                correct.setText("Correction : " + (list[i][0]) + " | " + (list[i][1]) + " | " + (list[i][2]) + " | " + (list[i][3]));
             }
             if (EasyActivity.numLevel != 3) {
                 startActivity(new Intent(Level1EasyActivity.this, ScoreActivity.class));
@@ -166,7 +168,7 @@ public class Level1EasyActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) Level1EasyActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 800, 800, true);
+            pw = new PopupWindow(layout, 600, 350, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
             close = (Button) layout.findViewById(R.id.button2);
@@ -184,24 +186,4 @@ public class Level1EasyActivity extends AppCompatActivity {
         }
     };
 
-    public void dialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder
-                .setTitle("You want to quit")
-                .setMessage("Are you sure?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                //.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Level1EasyActivity.this,FirstScreenActivity.class));
-                    }
-                })
-                .setNegativeButton("No", null)
-                .show();
-
-        /*AlertDialog dialog = builder.create();
-        Button positive = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-        positive.setTextColor(0xFF303F9F);
-        dialog.show();*/
-    }
 }
