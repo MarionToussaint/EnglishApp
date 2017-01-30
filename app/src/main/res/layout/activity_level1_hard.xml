@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_level1_hard"
     android:layout_width="match_parent"
@@ -77,6 +78,22 @@
         android:textAllCaps="false"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:layout_below="@+id/hard"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:id="@+id/retrn"
+        app:backgroundTint="@color/darkblue"
+        app:rippleColor="@color/white"
+        backgroundTint="@color/darkblue" />
 
     <Button
         android:text="VERIFY"

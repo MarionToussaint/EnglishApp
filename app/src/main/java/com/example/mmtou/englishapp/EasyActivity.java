@@ -32,7 +32,6 @@ public class EasyActivity extends AppCompatActivity {
         retrn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(EasyActivity.this,FirstScreenActivity.class));
-                //createDialog();
             }
         });
 
@@ -58,23 +57,4 @@ public class EasyActivity extends AppCompatActivity {
         });
     }
 
-    /*public void createDialog(){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Are you sure ?");
-        alert.setCancelable(false);
-        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(EasyActivity.this,FirstScreenActivity.class));
-            }
-        });
-
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        alert.create().show();
-    }*/
 }

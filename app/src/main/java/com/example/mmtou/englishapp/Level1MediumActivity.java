@@ -1,9 +1,13 @@
 package com.example.mmtou.englishapp;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +24,7 @@ public class Level1MediumActivity extends AppCompatActivity {
     private TextView correct;
     private int i ;
     public static int point = 0;
+    private FloatingActionButton retrn;
 
     private String[][] list = new String[][] {{"be","was","been","être"}, {"have","had","had","avoir"} ,{"do","did","done","faire"},{"go","went","gone","aller"}};
     private String[][] list1 = new String[][] {{"become","became","become","devenir"}, {"begin","began","begun","commencer"} ,{"bring","brought","brought","apporter"},{"build","built","built","construire"}};
@@ -39,6 +44,34 @@ public class Level1MediumActivity extends AppCompatActivity {
         pp1 = (EditText) findViewById(R.id.participle2);
         btn = (Button) findViewById(R.id.btnVerify);
         correct = (TextView) findViewById(R.id.correction);
+        retrn = (FloatingActionButton) findViewById(R.id.retrn);
+
+        retrn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //startActivity(new Intent(Level1EasyActivity.this,EasyActivity.class));
+                //dialog();
+                final Dialog dialog = new Dialog(Level1MediumActivity.this);
+                dialog.setTitle("Do you want to quit ?");
+                dialog.setContentView(R.layout.alertdialog_window);
+                dialog.show();
+                Button byes = (Button)dialog.findViewById(R.id.yes);
+                Button bno = (Button)dialog.findViewById(R.id.no);
+
+                byes.setOnClickListener(new View.OnClickListener(){
+                    public void onClick(View v){
+                        startActivity(new Intent(Level1MediumActivity.this,FirstScreenActivity.class));
+                    }
+                });
+                bno.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.cancel();
+                    }
+                });
+                Window window = dialog.getWindow();
+                window.setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+            }
+        });
 
         switch(EasyActivity.numLevel){
             case 1:

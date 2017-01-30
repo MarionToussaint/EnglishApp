@@ -1,15 +1,22 @@
 package com.example.mmtou.englishapp;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.renderscript.ScriptGroup;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
@@ -50,7 +57,28 @@ public class Level1EasyActivity extends AppCompatActivity {
 
         retrn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(Level1EasyActivity.this,EasyActivity.class));
+                //startActivity(new Intent(Level1EasyActivity.this,EasyActivity.class));
+                //dialog();
+                final Dialog dialog = new Dialog(Level1EasyActivity.this);
+                dialog.setTitle("Do you want to quit ?");
+                dialog.setContentView(R.layout.alertdialog_window);
+                dialog.show();
+                Button byes = (Button)dialog.findViewById(R.id.yes);
+                Button bno = (Button)dialog.findViewById(R.id.no);
+
+                byes.setOnClickListener(new View.OnClickListener(){
+                    public void onClick(View v){
+                        startActivity(new Intent(Level1EasyActivity.this,FirstScreenActivity.class));
+                    }
+                });
+                bno.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.cancel();
+                    }
+                });
+                Window window = dialog.getWindow();
+                window.setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
             }
         });
 
@@ -155,4 +183,25 @@ public class Level1EasyActivity extends AppCompatActivity {
             pw.dismiss();
         }
     };
+
+    public void dialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder
+                .setTitle("You want to quit")
+                .setMessage("Are you sure?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                //.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Level1EasyActivity.this,FirstScreenActivity.class));
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
+
+        /*AlertDialog dialog = builder.create();
+        Button positive = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        positive.setTextColor(0xFF303F9F);
+        dialog.show();*/
+    }
 }

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/darkblue">
 
-</LinearLayout>
+    <Button
+        android:text="YES"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:id="@+id/yes"
+        android:textSize="12sp"
+        android:textColor="@color/darkblue"
+        android:background="@color/white"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/sure"
+        android:layout_toLeftOf="@+id/sure"
+        android:layout_toStartOf="@+id/sure" />
+
+    <Button
+        android:text="NO"
+        android:id="@+id/no"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:textColor="@color/darkblue"
+        android:textSize="12sp"
+        android:background="@color/white"
+        android:layout_alignBottom="@+id/yes"
+        android:layout_toRightOf="@+id/sure"
+        android:layout_toEndOf="@+id/sure" />
+
+    <TextView
+        android:text="You want to quit."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quit"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:text="Are you sure ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sure"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/quit"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
