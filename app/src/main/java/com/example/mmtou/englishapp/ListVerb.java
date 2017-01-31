@@ -95,31 +95,43 @@ public class ListVerb {
 
 
     public static String[][] list2Level1 = new String[][] {
-            {"be","was","been","être"},{"awake"},
-            {"handwrite"},{"hang","hung","hung","accrocher"},
+            {"be","was","been","être"},{"awake","awoke","awoken","se réveiller"},
+            {"handwrite","handwrote","handwritten","écrire à la main"},{"hang","hung","hung","accrocher"},
             {"flee","fled","fled","fuir"},{"keep","kept","kept","garder"},
-            {"overhear"},{"overtake"},
+            {"overhear","overheard","overheard","surprendre"},{"overtake","overtook","overtaken","dépasser"},
             {"slide","slid","slidden","se glisser"},{"shrink","shrank","shrunk","rétrécir"}};
 
     public static String[][] list2Level2 = new String[][] {
             {"sink","sank","sunk","sombrer"},{"spring","sprang","sprung","sauter"},
-            {"stink","stank","stunk","puer"},{"spoil","","",""},
+            {"stink","stank","stunk","puer"},{"spoil","spoilt","spoilt","gâcher"},
             {"spread","spread","spread","se répandre"},{"mean","meant","meant","signifier"},
             {"break","broke","broken","briser"},{"wake","woke","woken","réveiller"},
             {"draw","drew","drawn","dessiner"},{"fall","fell","fallen","tomber"}};
 
     public static String[][] list2Level3 = new String[][] {
             {"shake","shook","shaken","secouer"},{"knit","knit","knit","tricoter"},
-            {"broadcast"},{"burst","burst","burst","éclater"},
+            {"broadcast","broadcast","broadcast","diffuser"},{"burst","burst","burst","éclater"},
             {"cast","cast","cast","jeter"},{"forsake","forsook","forsaken","abandonner"},
-            {"sling","slung","slung","épingler"},{"forecast"},
-            {"foresee"},{"spill","spilt","spilt"}};
+            {"sling","slung","slung","épingler"},{"forecast","forecast","forecast","prévoir"},
+            {"foresee","foresaw","foreseen","anticiper"},{"spill","spilt","spilt","renverser"}};
 
     public static String[][] list2Level4 = new String[][]{
             {"spit","spat","spat","cracher"},{"stride","strode","stridden","marcher à grands pas"},
-            {"string","strung","strung",""},{"stand"},{"sweel"},
-            {"spin","span","spun","tourner"},{"weave","wove","woven","tisser"},
-            {"withdraw"}, {"get","got","got","obtenir"},{"swing"}
+            {"string","strung","strung","enchaîner"},{"stand","stood","stood","se tenir debout"},
+            {"swell","swelled","swollen","gonfler"}, {"spin","span","spun","tourner"},
+            {"weave","wove","woven","tisser"}, {"withdraw","withdrew","withdrawn","retirer"},
+            {"get","got","got","obtenir"},{"swing","swung","swung","se balancer"}};
+
+    public static String[][] list2Level5 = new String[][]{
+            {"hold","held","held","tenir"}, {"lie","lay","lain","se coucher"},
+            {"deal"},{"fit"},
+            {"bet"},{"bless"},
+            {"wet"},{"burn"},
+            {"light"},{"sneak"}
+    };
+
+    public static String[][] list2Level6 = new String[][]{
+
     };
 
     public ListVerb(){

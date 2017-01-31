@@ -119,20 +119,20 @@ public class Level1MediumActivity extends AppCompatActivity {
                 break;
             case 5:
                 level.setText("LEVEL " + MediumActivity.numLevel);
-                verb.setText(ListVerb.listLevel2[i][3]);
+                verb.setText(ListVerb.list2Level5[i][3]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel2,i);
+                        exercise(ListVerb.list2Level5,i);
                         i++;
                     }
                 });
                 break;
             case 6:
                 level.setText("LEVEL " + MediumActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][3]);
+                verb.setText(ListVerb.list2Level6[i][3]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.list2Level6,i);
                         i++;
                     }
                 });
