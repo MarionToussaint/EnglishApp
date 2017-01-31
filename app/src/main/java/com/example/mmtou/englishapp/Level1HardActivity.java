@@ -32,6 +32,7 @@ public class Level1HardActivity extends AppCompatActivity {
     private FloatingActionButton retrn;
     public static String correction;
     private PopupWindow pw;
+    private TextView page;
 
     private String[][] list = new String[][] {{"be","was","been","être","definition of be"},
             {"have","had","had","avoir","definition of have"} ,
@@ -56,6 +57,7 @@ public class Level1HardActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnVerify);
         correct = (TextView) findViewById(R.id.correction);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
+        page = (TextView)findViewById(R.id.page);
 
 
         retrn.setOnClickListener(new View.OnClickListener(){
@@ -89,6 +91,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 1:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list,i);
@@ -99,6 +102,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 2:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list1[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list1,i);
@@ -109,6 +113,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 3:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list2[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list2,i);
@@ -119,6 +124,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 4:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list,i);
@@ -129,6 +135,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 5:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list1[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list1,i);
@@ -139,6 +146,7 @@ public class Level1HardActivity extends AppCompatActivity {
             case 6:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(list2[i][4]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(list2,i);
@@ -162,6 +170,7 @@ public class Level1HardActivity extends AppCompatActivity {
             p1.getText().clear();
             pp1.getText().clear();
             verb.setText(list[i+1][0]);
+            page.setText((i+2) + " / " + ListVerb.list2Level1.length);
         } else if (i == (list.length - 1)) {
             if (((list[i][1]).equals(p1.getText().toString())) && ((list[i][2]).equals(pp1.getText().toString()))) {
                 Toast.makeText(getApplicationContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
@@ -182,7 +191,7 @@ public class Level1HardActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) Level1HardActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 800, 400, true);
+            pw = new PopupWindow(layout, 900, 500, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
             Button close = (Button) layout.findViewById(R.id.button2);

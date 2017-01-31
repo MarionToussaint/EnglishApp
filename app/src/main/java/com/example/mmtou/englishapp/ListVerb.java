@@ -6,6 +6,9 @@ package com.example.mmtou.englishapp;
 
 public class ListVerb {
     public static String [][] definition = new String[][]{
+            {"to accept or bear (someone or something bad, unpleased...); to remain, continue, stay","I cannot abide her constant unpunctuality.","The employees must abide by the rules of the company.","Bill always abides by his promises."},
+            {"to originate; toget up from horizontal position out of bed; to come into existence","Problems always arise during such protests for human rights.","Disputes arose over who would be the first to speak.","Many questions have arisen recently over the origin of life."},
+            {"to stop sleeping; to wake up","Mary will awake in an hour because she has to go to work.","I awoke in the middle of the night when I heard that noise.","The patient has awoken from a two-week coma."},
             {"to exist, live or occur ; to have as a quality or a state ; an auxiliary verb","John is my brother.","The money was found by a child.","I haven't been there for several years."},
             {"to come into existence","My son wants to become a doctor when he grows up.", "Bill won the lottery and became rich overnight.","Obesity has become a problem in the United States."},
             {"to start something","The alphabet begins with the letter 'a'.","It began to rain just as we were going out.","They had begun to work when the bell rang."},
@@ -99,44 +102,53 @@ public class ListVerb {
             {"handwrite","handwrote","handwritten","écrire à la main"},{"hang","hung","hung","accrocher"},
             {"flee","fled","fled","fuir"},{"keep","kept","kept","garder"},
             {"overhear","overheard","overheard","surprendre"},{"overtake","overtook","overtaken","dépasser"},
-            {"slide","slid","slidden","se glisser"},{"shrink","shrank","shrunk","rétrécir"}};
+            {"slide","slid","slidden","se glisser"},{"shrink","shrank","shrunk","rétrécir"},
+            {"lay","laid","laid","pondre"},{"lead","led","led","mener"},
+            {"stick","stuck","stuck","coller"}};
 
     public static String[][] list2Level2 = new String[][] {
             {"sink","sank","sunk","sombrer"},{"spring","sprang","sprung","sauter"},
             {"stink","stank","stunk","puer"},{"spoil","spoilt","spoilt","gâcher"},
             {"spread","spread","spread","se répandre"},{"mean","meant","meant","signifier"},
             {"break","broke","broken","briser"},{"wake","woke","woken","réveiller"},
-            {"draw","drew","drawn","dessiner"},{"fall","fell","fallen","tomber"}};
+            {"draw","drew","drawn","dessiner"},{"fall","fell","fallen","tomber"},
+            {"blow","blew","blown","souffler"},{"clothe","clad","clad","vêtir"},
+            {"sweep","swept","swept","balayer"}};
 
     public static String[][] list2Level3 = new String[][] {
             {"shake","shook","shaken","secouer"},{"knit","knit","knit","tricoter"},
             {"broadcast","broadcast","broadcast","diffuser"},{"burst","burst","burst","éclater"},
             {"cast","cast","cast","jeter"},{"forsake","forsook","forsaken","abandonner"},
             {"sling","slung","slung","épingler"},{"forecast","forecast","forecast","prévoir"},
-            {"foresee","foresaw","foreseen","anticiper"},{"spill","spilt","spilt","renverser"}};
+            {"foresee","foresaw","foreseen","anticiper"},{"spill","spilt","spilt","renverser"},
+            {"lend","lent","lent","prêter"},{"seek","sought","sought","chercher"},
+            {"speel","spelt","spelt","épeler"}};
 
     public static String[][] list2Level4 = new String[][]{
             {"spit","spat","spat","cracher"},{"stride","strode","stridden","marcher à grands pas"},
             {"string","strung","strung","enchaîner"},{"stand","stood","stood","se tenir debout"},
             {"swell","swelled","swollen","gonfler"}, {"spin","span","spun","tourner"},
             {"weave","wove","woven","tisser"}, {"withdraw","withdrew","withdrawn","retirer"},
-            {"get","got","got","obtenir"},{"swing","swung","swung","se balancer"}};
+            {"get","got","got","obtenir"},{"swing","swung","swung","se balancer"},
+            {"lean","leant","leant","pencher"},{"strike","struck","struck","frapper"},
+            {"speed","sped","sped","se dépêcher"}};
 
     public static String[][] list2Level5 = new String[][]{
             {"hold","held","held","tenir"}, {"lie","lay","lain","se coucher"},
-            {"deal"},{"fit"},
-            {"bet"},{"bless"},
-            {"wet"},{"burn"},
-            {"light"},{"sneak"}
-    };
+            {"deal","dealt","dealt","négocier"},{"fit","fit","fit","répondre à"},
+            {"bet","bet","bet","parier"},{"bless","blest","blest","bénir"},
+            {"wet","wet","wet","mouiller"},{"burn","burnt","burnt","brûler"},
+            {"light","lit","lit","éclairer"},{"sneak","snuck","snuck","se faufiler"},
+            {"sweat","sweat","sweat","suer"},{"kneel","knelt","knelt","s'agenouiller"},
+            {"weep","wept","wept","pleurer"}};
 
     public static String[][] list2Level6 = new String[][]{
-            {"forbid"},{"forget"},
-            {"forgive"}, {"breed"},
-            {"quit"},{"shoot"},
-            {"wed"},{"mistake"},
-            {"misunderstand"},{"prove"}
-    };
+            {"forbid","forbade","forbidden","interdire"},{"forget","forgot","forgotten","oublier"},
+            {"forgive","forgave","forgiven","pardonner"}, {"breed","bred","bred","se reproduire"},
+            {"quit","quit","quit","quitter"},{"shoot","shot","shot","tirer"},
+            {"wed","wed","wed","marier"},{"mistake","mistook","mistaken","comprendre à tort"},
+            {"misunderstand","misunderstood","misunderstood","mal interpréter"},{"prove","proved","proven","prouver"},
+            {"shave","shaved","shaven","raser"},{"clap","clapt","clapt","taper"},{"upset","upset","upset","contrarier"}};
 
     public ListVerb(){
 

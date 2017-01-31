@@ -16,7 +16,8 @@
         android:textAllCaps="true"
         android:text="djifjpdjqzpdez"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <Button
         android:text="Close"

@@ -32,6 +32,7 @@ public class Level1MediumActivity extends AppCompatActivity {
     private FloatingActionButton retrn;
     public static String correction;
     private PopupWindow pw;
+    private TextView page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class Level1MediumActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnVerify);
         correct = (TextView) findViewById(R.id.correction);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
+        page = (TextView)findViewById(R.id.page);
 
         retrn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -78,6 +80,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             case 1:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.list2Level1[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.list2Level1,i);
@@ -89,6 +92,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             case 2:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.list2Level2[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.list2Level2,i);
@@ -99,6 +103,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             case 3:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.list2Level3[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.list2Level3,i);
@@ -108,10 +113,11 @@ public class Level1MediumActivity extends AppCompatActivity {
                 break;
             case 4:
                 level.setText("LEVEL " + MediumActivity.numLevel);
-                verb.setText(ListVerb.listLevel1[i][3]);
+                verb.setText(ListVerb.list2Level4[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel1,i);
+                        exercise(ListVerb.list2Level4,i);
                         i++;
                         System.out.println("FUCK");
                     }
@@ -120,6 +126,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             case 5:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.list2Level5[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.list2Level5,i);
@@ -130,6 +137,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             case 6:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.list2Level6[i][3]);
+                page.setText((i+1) + " / " + ListVerb.list2Level1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.list2Level6,i);
@@ -155,6 +163,7 @@ public class Level1MediumActivity extends AppCompatActivity {
             p2.getText().clear();
             pp2.getText().clear();
             verb.setText(list[i+1][3]);
+            page.setText((i+2) + " / " + ListVerb.list2Level1.length);
         } else if (i == (list.length - 1)) {
             if (((list[i][1]).equals(p2.getText().toString())) && ((list[i][2]).equals(pp2.getText().toString()))&& ((list[i][0]).equals(inf.getText().toString()))) {
                 Toast.makeText(getApplicationContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
@@ -175,7 +184,7 @@ public class Level1MediumActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) Level1MediumActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 800, 400, true);
+            pw = new PopupWindow(layout, 1000, 500, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
             Button close = (Button) layout.findViewById(R.id.button2);

@@ -44,6 +44,10 @@ public class ListActivity extends AppCompatActivity {
         list = (ListView) findViewById(R.id.listview);
         inf = (TextView) findViewById(R.id.infinitive1);
 
+        addList("abide", "abode", "abode", "respecter");
+        addList("arise", "arose", "arisen", "survenir");
+        addList("awake", "awoke", "awoken", "se réveiller");
+
         addList("be", "was,were", "been", "être");
         addList("become", "became", "become", "devenir");
         addList("begin", "began", "begun", "commencer");
