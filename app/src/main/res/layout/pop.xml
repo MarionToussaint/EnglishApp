@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/correct1"
         android:textColor="@color/white"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="40dp"
         android:textAllCaps="true"
         android:text="djifjpdjqzpdez"
         android:layout_alignParentTop="true"
@@ -23,11 +23,11 @@
         android:layout_width="50dip"
         android:layout_height="30dip"
         android:id="@+id/button2"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="33dp"
         android:textColor="@color/darkblue"
         android:textAlignment="center"
         android:textSize="12sp"
         android:background="@color/white"
-        android:layout_alignTop="@+id/correct1"
+        android:layout_below="@+id/correct1"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

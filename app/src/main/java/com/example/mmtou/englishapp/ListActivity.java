@@ -98,9 +98,9 @@ public class ListActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) ListActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop_list, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 900,  600, true);
+            pw = new PopupWindow(layout, 1000,  650, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
-
+            ((TextView) pw.getContentView().findViewById(R.id.verb1)).setText(feedList.get(pos).get("infinitive"));
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(ListVerb.definition[pos][0]);
             ((TextView) pw.getContentView().findViewById(R.id.example)).setText(ListVerb.definition[pos][1]);
             ((TextView) pw.getContentView().findViewById(R.id.example2)).setText(ListVerb.definition[pos][2]);

@@ -152,7 +152,7 @@ public class Level1HardActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) Level1HardActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 600, 500, true);
+            pw = new PopupWindow(layout, 800, 400, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
             Button close = (Button) layout.findViewById(R.id.button2);
