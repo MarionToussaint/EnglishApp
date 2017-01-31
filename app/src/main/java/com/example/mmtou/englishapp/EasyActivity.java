@@ -15,6 +15,12 @@ public class EasyActivity extends AppCompatActivity {
     private Button level1;
     private Button level2;
     private Button level3;
+    private Button level4;
+    private Button level5;
+    private Button level6;
+    private Button level7;
+    private Button level8;
+    private Button level9;
     public static int numLevel;
     private FloatingActionButton retrn;
 
@@ -27,6 +33,12 @@ public class EasyActivity extends AppCompatActivity {
         level1 = (Button) findViewById(R.id.level1);
         level2 = (Button) findViewById(R.id.level2);
         level3 = (Button) findViewById(R.id.level3);
+        level4 = (Button) findViewById(R.id.level4);
+        level5 = (Button) findViewById(R.id.level5);
+        level6 = (Button) findViewById(R.id.level6);
+        level7 = (Button) findViewById(R.id.level7);
+        level8 = (Button) findViewById(R.id.level8);
+        level9 = (Button) findViewById(R.id.level9);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
 
         retrn.setOnClickListener(new View.OnClickListener(){
@@ -37,21 +49,63 @@ public class EasyActivity extends AppCompatActivity {
 
         level1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                numLevel =1;
+                numLevel = 1;
                 startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
             }
         });
 
         level2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                numLevel =2;
+                numLevel = 2;
                 startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
             }
         });
 
         level3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                numLevel =3;
+                numLevel = 3;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level4.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 4;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level5.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 5;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level6.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 6;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level7.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 7;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level8.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 8;
+                startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
+            }
+        });
+
+        level9.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel = 9;
                 startActivity(new Intent(EasyActivity.this,Level1EasyActivity.class));
             }
         });

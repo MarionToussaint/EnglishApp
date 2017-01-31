@@ -38,8 +38,8 @@ public class ListActivity extends AppCompatActivity {
     private Button close;
     private PopupWindow pw;
     private int pos;
-    public String [][] definition = new String[][]{{"to exist, live or occur ; to have as a quality or a state ; an auxiliary verb","John is my brother","The money was found by a child","C'est trop bien j'ai grave bien avancé !"},
-            {"definition of HAVE","Example of HAVE", "Exemple of HAVE","boo"}};
+    /*public String [][] definition = new String[][]{{"to exist, live or occur ; to have as a quality or a state ; an auxiliary verb","John is my brother","The money was found by a child","C'est trop bien j'ai grave bien avancé !"},
+            {"definition of HAVE","Example of HAVE", "Exemple of HAVE","boo"}};*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,12 +101,13 @@ public class ListActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) ListActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop_list, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 900,  550, true);
+            pw = new PopupWindow(layout, 900,  600, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
-            ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(definition[pos][0]);
-            ((TextView) pw.getContentView().findViewById(R.id.example)).setText(definition[pos][1]);
-            ((TextView) pw.getContentView().findViewById(R.id.example2)).setText(definition[pos][2]);
-            ((TextView) pw.getContentView().findViewById(R.id.example3)).setText(definition[pos][3]);
+
+            ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(ListVerb.definition[pos][0]);
+            ((TextView) pw.getContentView().findViewById(R.id.example)).setText(ListVerb.definition[pos][1]);
+            ((TextView) pw.getContentView().findViewById(R.id.example2)).setText(ListVerb.definition[pos][2]);
+            ((TextView) pw.getContentView().findViewById(R.id.example3)).setText(ListVerb.definition[pos][3]);
             close = (Button) layout.findViewById(R.id.button2);
             close.setOnClickListener(cancel);
         }

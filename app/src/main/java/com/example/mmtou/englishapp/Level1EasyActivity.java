@@ -33,15 +33,11 @@ public class Level1EasyActivity extends AppCompatActivity {
     private TextView correct;
     private int i ;
     public static int point = 0;
-    private Button close;
     private PopupWindow pw;
     private FloatingActionButton retrn;
     public static String correction;
     private String message;
 
-    private String[][] list = new String[][] {{"be","was","been","être"}, {"have","had","had","avoir"} ,{"do","did","done","faire"},{"go","went","gone","aller"}};
-    private String[][] list1 = new String[][] {{"become","became","become","devenir"}, {"begin","began","begun","commencer"} ,{"bring","brought","brought","apporter"},{"build","built","built","construire"}};
-    private String[][] list2 = new String[][] {{"buy","bought","bought","acheter"}, {"come","came","come","venir"} ,{"cut","cut","cut","couper"},{"drive","drove","driven","conduire"}};
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1_easy);
@@ -58,8 +54,6 @@ public class Level1EasyActivity extends AppCompatActivity {
 
         retrn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //startActivity(new Intent(Level1EasyActivity.this,EasyActivity.class));
-                //dialog();
                 final Dialog dialog = new Dialog(Level1EasyActivity.this);
                 dialog.setTitle("Do you want to quit ?");
                 dialog.setContentView(R.layout.alertdialog_window);
@@ -86,49 +80,98 @@ public class Level1EasyActivity extends AppCompatActivity {
         switch(EasyActivity.numLevel){
             case 1:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(list[i][0]);
+                verb.setText(ListVerb.listLevel1[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(list,i);
+                        exercise(ListVerb.listLevel1,i);
                         i++;
                     }
                 });
             break;
             case 2:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(list1[i][0]);
+                verb.setText(ListVerb.listLevel2[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(list1,i);
+                        exercise(ListVerb.listLevel2,i);
                         i++;
                     }
                 });
             break;
             case 3:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(list2[i][0]);
+                verb.setText(ListVerb.listLevel3[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(list2,i);
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 4:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 5:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 6:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 7:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 8:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 9:
+                level.setText("LEVEL " + EasyActivity.numLevel);
+                verb.setText(ListVerb.listLevel3[i][0]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.listLevel3,i);
                         i++;
                     }
                 });
                 break;
         }
-
-        //verb.setText(list[i][0]);
-
-        /*btn.setOnClickListener(new Button.OnClickListener(){
-            public void onClick(View v){
-                exercise(list,i);
-                i++;
-            }
-        });*/
-
     }
 
     protected void exercise(String[][] list, int i) {
-        //correct.setText("");
         if (i < (list.length - 1)) {
             if (((list[i][1]).equals(p1.getText().toString())) && ((list[i][2]).equals(pp1.getText().toString()))) {
                 Toast.makeText(getApplicationContext(), "Correct Answer", Toast.LENGTH_SHORT).show();
@@ -137,7 +180,6 @@ public class Level1EasyActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Wrong Answer", Toast.LENGTH_SHORT).show();
                 correction = ((list[i][0]) + "  |  " + (list[i][1]) + "  |  " + (list[i][2]) + "  |  " + (list[i][3]));
                 showPopup();
-
             }
             p1.getText().clear();
             pp1.getText().clear();
@@ -150,12 +192,6 @@ public class Level1EasyActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Wrong Answer", Toast.LENGTH_SHORT).show();
                 correction = ((list[i][0]) + "  |  " + (list[i][1]) + "  |  " + (list[i][2]) + "  |  " + (list[i][3]));
                 showPopup();
-            }
-            if (EasyActivity.numLevel != 3) {
-                startActivity(new Intent(Level1EasyActivity.this, ScoreActivity.class));
-            }
-            else {
-                startActivity(new Intent(Level1EasyActivity.this, ScoreFinalActivity.class));
             }
         } else {
             startActivity(new Intent(Level1EasyActivity.this, EasyActivity.class));
@@ -171,7 +207,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             pw = new PopupWindow(layout, 600, 350, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
-            close = (Button) layout.findViewById(R.id.button2);
+            Button close = (Button) layout.findViewById(R.id.button2);
             close.setOnClickListener(cancel);
         }
         catch (Exception e){
@@ -183,7 +219,16 @@ public class Level1EasyActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             pw.dismiss();
+            if (i == ListVerb.listLevel1.length) {
+                if (EasyActivity.numLevel != 3) {
+                    startActivity(new Intent(Level1EasyActivity.this, ScoreActivity.class));
+                } else {
+                    startActivity(new Intent(Level1EasyActivity.this, ScoreFinalActivity.class));
+                }
+            }
         }
     };
+
+
 
 }
