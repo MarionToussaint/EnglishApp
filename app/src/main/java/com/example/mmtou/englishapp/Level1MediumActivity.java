@@ -77,6 +77,37 @@ public class Level1MediumActivity extends AppCompatActivity {
         switch(MediumActivity.numLevel){
             case 1:
                 level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(ListVerb.list2Level1[i][3]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.list2Level1,i);
+                        i++;
+                        System.out.println("FUCK");
+                    }
+                });
+                break;
+            case 2:
+                level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(ListVerb.list2Level2[i][3]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.list2Level2,i);
+                        i++;
+                    }
+                });
+                break;
+            case 3:
+                level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(ListVerb.list2Level3[i][3]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(ListVerb.list2Level3,i);
+                        i++;
+                    }
+                });
+                break;
+            case 4:
+                level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.listLevel1[i][3]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
@@ -86,7 +117,7 @@ public class Level1MediumActivity extends AppCompatActivity {
                     }
                 });
                 break;
-            case 2:
+            case 5:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.listLevel2[i][3]);
                 btn.setOnClickListener(new Button.OnClickListener(){
@@ -96,7 +127,7 @@ public class Level1MediumActivity extends AppCompatActivity {
                     }
                 });
                 break;
-            case 3:
+            case 6:
                 level.setText("LEVEL " + MediumActivity.numLevel);
                 verb.setText(ListVerb.listLevel3[i][3]);
                 btn.setOnClickListener(new Button.OnClickListener(){
@@ -160,7 +191,7 @@ public class Level1MediumActivity extends AppCompatActivity {
         public void onClick(View v) {
             pw.dismiss();
             if (i == ListVerb.listLevel1.length) {
-                if (EasyActivity.numLevel != 10) {
+                if (EasyActivity.numLevel != 15) {
                     startActivity(new Intent(Level1MediumActivity.this, ScoreActivity.class));
                 } else {
                     startActivity(new Intent(Level1MediumActivity.this, ScoreFinalActivity.class));

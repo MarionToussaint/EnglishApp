@@ -116,6 +116,36 @@ public class Level1HardActivity extends AppCompatActivity {
                     }
                 });
                 break;
+            case 4:
+                level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(list[i][4]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(list,i);
+                        i++;
+                    }
+                });
+                break;
+            case 5:
+                level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(list1[i][4]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(list1,i);
+                        i++;
+                    }
+                });
+                break;
+            case 6:
+                level.setText("LEVEL " + MediumActivity.numLevel);
+                verb.setText(list2[i][4]);
+                btn.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v){
+                        exercise(list2,i);
+                        i++;
+                    }
+                });
+                break;
         }
     }
 
@@ -168,7 +198,7 @@ public class Level1HardActivity extends AppCompatActivity {
         public void onClick(View v) {
             pw.dismiss();
             if (i == ListVerb.listLevel1.length) {
-                if (EasyActivity.numLevel != 10) {
+                if (EasyActivity.numLevel != 15) {
                     startActivity(new Intent(Level1HardActivity.this, ScoreActivity.class));
                 } else {
                     startActivity(new Intent(Level1HardActivity.this, ScoreFinalActivity.class));

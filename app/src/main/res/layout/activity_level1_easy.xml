@@ -25,25 +25,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/inf2"
-        android:id="@+id/p2"
-        android:hint="Past Participle"
-        android:textColor="@color/darkblue"
-        android:textColorLink="@color/white"
-        android:textColorHint="@color/darkblue"
-        android:textSize="16sp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColorHighlight="@color/white"
-        android:textCursorDrawable="@color/white"/>
-
     <Button
         android:text="VERIFY"
         android:layout_width="wrap_content"
@@ -71,25 +52,6 @@
         android:textStyle="normal|bold"
         android:textAlignment="center"
         android:textSize="16sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="6"
-        android:id="@+id/inf2"
-        android:hint="Preterite"
-        android:textColorLink="@color/white"
-        android:textColorHint="@color/darkblue"
-        android:textColor="@color/darkblue"
-        android:textSize="16sp"
-        android:layout_below="@+id/verb"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColorHighlight="@color/white"
-        android:textCursorDrawable="@color/white"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,6 +96,55 @@
         android:layout_below="@+id/retrn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/p2"
+        android:hint="Past Participle"
+        android:textColor="@color/darkblue"
+        android:textColorLink="@color/white"
+        android:textColorHint="@color/darkblue"
+        android:textSize="16sp"
+        android:textColorHighlight="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:layout_below="@+id/inf2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="6"
+        android:id="@+id/inf2"
+        android:hint="Preterite"
+        android:textColorLink="@color/white"
+        android:textColorHint="@color/darkblue"
+        android:textColor="@color/darkblue"
+        android:textSize="16sp"
+        android:textColorHighlight="@color/white"
+        android:textCursorDrawable="@color/white"
+        android:layout_below="@+id/verb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page"
+        android:textColor="@color/darkblue"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

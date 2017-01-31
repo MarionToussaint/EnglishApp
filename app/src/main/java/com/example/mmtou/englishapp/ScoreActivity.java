@@ -22,7 +22,13 @@ public class ScoreActivity extends AppCompatActivity {
         point = (TextView) findViewById(R.id.point);
         menu = (Button) findViewById(R.id.menu);
         next = (Button) findViewById(R.id.nextLevel);
-        point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(10));
+        if (FirstScreenActivity.difficulty == 1){
+            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(10));
+        }
+        else {
+            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(15));
+        }
+
 
         menu.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){

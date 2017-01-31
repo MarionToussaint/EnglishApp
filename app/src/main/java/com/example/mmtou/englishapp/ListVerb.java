@@ -15,10 +15,18 @@ public class ListVerb {
             {"to acquire something in exchange for money","I have been some money to buy a new car.","The old lady was feeling lonely so she boughta dog.","She told her grandson that she had bought a lot of candy for him."},
             {"to select","The jury will have to choose one winner per country.","She chose the most beautiful dress in the shop and bought it.","Mr. Jones was chosen as executive director of the company."},
             {"to move towards or to arrive at a specified place, time or situation","Tom usually comes to school by bus.","She is feeling sad because nobody came to her party last night.","How many people have come to the exhibition yet ?"},
-            {"to break the surface of something with a knife or similar tool","My father often cuts himself while shaving.","Billy cut his finger with a knife when he was cooking.","The hairdresser has cut Jane's hair very short."}};
-
-
-
+            {"to break the surface of something with a knife or similar tool","My father often cuts himself while shaving.","Billy cut his finger with a knife when he was cooking.","The hairdresser has cut Jane's hair very short."},
+            {"to perform or carry out","We should do something to help those people.","The doctors did everything they could to save the patient.","What have you done with my books ?"},
+            {"to make a picture using a pen or a pencil","I went the bank to draw some money out of my account.","The teacher wants to know who drew her caricature on the wall.","Some readers have drawn wrong conclusions about the book."},
+            {"to consume liquids","You mustn't drink and drive.","Tracy drank far too much yesterday.","I have drunk too much wine already."},
+            {"to operate and control a car or other vehicle","I drove to the supermarket but couldn't find a parking space there.","Could you drive me to the airport.","The truck driver has driven the whole night and now he is exhausted."},
+            {"to move downwards or to the groung","The kid fell down and broke his leg.","With the coming of autumn, leaves are starting to fall.","The temperature has fallen sharply."},
+            {"to sense by touch ; to experience an emotion, or sensation","If you take some aspirin, you'll feel better.","Susan felt very sad when her cat died.","Feel this feather pillow ! It's really soft."},
+            {"to discover something either by chance or when looking for it","I can't find my wallet. Have you seen it ?","A dead whale was found on the shore.","Have you found your glasses ?"},
+            {"to obtain, catch or receive","Billy got a tennis racket for his birthday.","I got a very angry when I saw what they have done.","I don't know how to get home from here."},
+            {"freely transfer the possession of (something) to (someone); to offer something as a present","Mr. Blake gave his wife a ring for their wedding anniversary.",
+            "The Jacksons have always given food and clothes to the poor.","Will you give this letter to your mom, Molly ?"},
+            {"to travel to a place","We went to the movies last night","Henry usually goes to work by train","Mary is not at home. She has gone to the doctor's"}};
 
 
     public static String[][] listLevel1 = new String[][] {
@@ -34,14 +42,13 @@ public class ListVerb {
             {"go","went","gone","aller"},{"think","thought","thought","penser"},
             {"freeze","froze","frozen","geler"},{"set","set","set","mettre en place"},
             {"put","put","put","mettre"},{"let,","let","let","laisser"}};
-            /*{"begin","began","begun","commencer"},
-            ,};*/
+
     public static String[][] listLevel3 = new String[][] {
-                    {"build","built","built","construire"},{"burn","burnt","burnt","brûler"},
-                    {"cut","cut","cut","couper"},{"dig","dug","dug","creuser"},
-                    {"break","broke","broken","briser"}, {"buy","bought","bought","acheter"},
-                    {"cost","cost","cost","coûter"},{"bring","brought","brought","apporter"},
-                    {"pay","paid","paid","payer"},{"sell","sold","sold","vendre"}};
+            {"build","built","built","construire"},{"burn","burnt","burnt","brûler"},
+            {"cut","cut","cut","couper"},{"dig","dug","dug","creuser"},
+            {"break","broke","broken","briser"}, {"buy","bought","bought","acheter"},
+            {"cost","cost","cost","coûter"},{"bring","brought","brought","apporter"},
+            {"pay","paid","paid","payer"},{"sell","sold","sold","vendre"}};
 
     public static String[][] listLevel4 = new String[][] {
             {"ring","rang","rung","sonner"},{"draw","drew","drawn","dessiner"},
@@ -86,6 +93,34 @@ public class ListVerb {
             {"shut","shut","shut","fermer"},{"tear","tore","torn","pleurer"}};
 
 
+
+    public static String[][] list2Level1 = new String[][] {
+            {"be","was","been","être"},{"awake"},
+            {"handwrite"},{"hang","hung","hung","accrocher"},
+            {"flee","fled","fled","fuir"},{"keep","kept","kept","garder"},
+            {"overhear"},{"overtake"},
+            {"slide","slid","slidden","se glisser"},{"shrink","shrank","shrunk","rétrécir"}};
+
+    public static String[][] list2Level2 = new String[][] {
+            {"sink","sank","sunk","sombrer"},{"spring","sprang","sprung","sauter"},
+            {"stink","stank","stunk","puer"},{"spoil","","",""},
+            {"spread","spread","spread","se répandre"},{"mean","meant","meant","signifier"},
+            {"break","broke","broken","briser"},{"wake","woke","woken","réveiller"},
+            {"draw","drew","drawn","dessiner"},{"fall","fell","fallen","tomber"}};
+
+    public static String[][] list2Level3 = new String[][] {
+            {"shake","shook","shaken","secouer"},{"knit","knit","knit","tricoter"},
+            {"broadcast"},{"burst","burst","burst","éclater"},
+            {"cast","cast","cast","jeter"},{"forsake","forsook","forsaken","abandonner"},
+            {"sling","slung","slung","épingler"},{"forecast"},
+            {"foresee"},{"spill","spilt","spilt"}};
+
+    public static String[][] list2Level4 = new String[][]{
+            {"spit","spat","spat","cracher"},{"stride","strode","stridden","marcher à grands pas"},
+            {"string","strung","strung",""},{"stand"},{"sweel"},
+            {"spin","span","spun","tourner"},{"weave","wove","woven","tisser"},
+            {"withdraw"}, {"get","got","got","obtenir"},{"swing"}
+    };
 
     public ListVerb(){
 

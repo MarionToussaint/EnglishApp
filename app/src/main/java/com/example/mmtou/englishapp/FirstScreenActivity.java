@@ -13,6 +13,7 @@ public class FirstScreenActivity extends AppCompatActivity {
     private Button medium;
     private Button hard;
     private Button list;
+    public static int difficulty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +28,21 @@ public class FirstScreenActivity extends AppCompatActivity {
 
         medium.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                difficulty = 2;
                 startActivity(new Intent(FirstScreenActivity.this,MediumActivity.class));
             }
         });
 
         easy.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                difficulty = 1;
                 startActivity(new Intent(FirstScreenActivity.this,EasyActivity.class));
             }
         });
 
         hard.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                difficulty = 3;
                 startActivity(new Intent(FirstScreenActivity.this,HardActivity.class));
             }
         });

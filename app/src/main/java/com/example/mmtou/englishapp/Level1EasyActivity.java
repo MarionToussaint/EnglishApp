@@ -32,6 +32,7 @@ public class Level1EasyActivity extends AppCompatActivity {
     private FloatingActionButton retrn;
     public static String correction;
     private String message;
+    private TextView page;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class Level1EasyActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnVerify);
         correct = (TextView) findViewById(R.id.correct1);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
+        page = (TextView)findViewById(R.id.page);
 
         retrn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -76,6 +78,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 1:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel1[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel1,i);
@@ -86,6 +89,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 2:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel2[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel2,i);
@@ -96,6 +100,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 3:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel3[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel3,i);
@@ -106,6 +111,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 4:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel4[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel4,i);
@@ -116,6 +122,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 5:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel5[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel5,i);
@@ -126,6 +133,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 6:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel6[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel6,i);
@@ -136,6 +144,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 7:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel3[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel3,i);
@@ -146,6 +155,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 8:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel8[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel8,i);
@@ -156,6 +166,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             case 9:
                 level.setText("LEVEL " + EasyActivity.numLevel);
                 verb.setText(ListVerb.listLevel9[i][0]);
+                page.setText((i+1) + " / " + ListVerb.listLevel1.length);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         exercise(ListVerb.listLevel9,i);
@@ -179,6 +190,7 @@ public class Level1EasyActivity extends AppCompatActivity {
             p1.getText().clear();
             pp1.getText().clear();
             verb.setText(list[i+1][0]);
+            page.setText((i+2) + " / " + ListVerb.listLevel1.length);
         } else if (i == (list.length - 1)) {
             if (((list[i][1]).equals(p1.getText().toString())) && ((list[i][2]).equals(pp1.getText().toString()))) {
                 Toast.makeText(getApplicationContext(), "Correct Answer", Toast.LENGTH_SHORT).show();

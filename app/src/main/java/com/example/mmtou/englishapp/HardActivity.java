@@ -13,6 +13,9 @@ public class HardActivity extends AppCompatActivity {
     private Button level1;
     private Button level2;
     private Button level3;
+    private Button level4;
+    private Button level5;
+    private Button level6;
     public static int numLevel;
     private FloatingActionButton retrn;
 
@@ -26,6 +29,9 @@ public class HardActivity extends AppCompatActivity {
         level1 = (Button) findViewById(R.id.level1);
         level2 = (Button) findViewById(R.id.level2);
         level3 = (Button) findViewById(R.id.level3);
+        level4 = (Button) findViewById(R.id.level4);
+        level5 = (Button) findViewById(R.id.level5);
+        level6 = (Button) findViewById(R.id.level6);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
 
         retrn.setOnClickListener(new View.OnClickListener(){
@@ -51,6 +57,27 @@ public class HardActivity extends AppCompatActivity {
         level3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 numLevel =3;
+                startActivity(new Intent(HardActivity.this,Level1HardActivity.class));
+            }
+        });
+
+        level4.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel =4;
+                startActivity(new Intent(HardActivity.this,Level1HardActivity.class));
+            }
+        });
+
+        level5.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel =5;
+                startActivity(new Intent(HardActivity.this,Level1HardActivity.class));
+            }
+        });
+
+        level6.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                numLevel =6;
                 startActivity(new Intent(HardActivity.this,Level1HardActivity.class));
             }
         });
