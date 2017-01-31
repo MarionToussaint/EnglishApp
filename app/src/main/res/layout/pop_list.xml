@@ -30,16 +30,6 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="dbsbcNJCJDPCPCKOP NSIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/example2"
-        android:textColor="@color/blue"
-        android:textSize="12sp"
-        android:layout_below="@+id/example"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:text="dffqhbqfbohOHCoicn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,6 +52,17 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/example3"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="dbsbcNJCJDPCPCKOP NSIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/example2"
+        android:textColor="@color/blue"
+        android:textSize="12sp"
+        android:layout_below="@+id/example"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
     " />
 
 </RelativeLayout>

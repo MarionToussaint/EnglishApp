@@ -32,14 +32,10 @@ public class ListActivity extends AppCompatActivity {
     private ArrayList<HashMap<String, String>> feedList= new ArrayList<HashMap<String, String>>();
     private HashMap<String, String> map = new HashMap<String, String>();
     private ListView list;
-    private Button popup;
     private TextView inf;
-    private ArrayList<String> verbs;
     private Button close;
     private PopupWindow pw;
     private int pos;
-    /*public String [][] definition = new String[][]{{"to exist, live or occur ; to have as a quality or a state ; an auxiliary verb","John is my brother","The money was found by a child","C'est trop bien j'ai grave bien avancé !"},
-            {"definition of HAVE","Example of HAVE", "Exemple of HAVE","boo"}};*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +52,8 @@ public class ListActivity extends AppCompatActivity {
         addList("build", "built", "built", "construire");
         addList("buy", "bought", "bought", "acheter");
         addList("choose", "chose", "chosen", "choisir");
-        addList("come", "came", "cut", "couper");
+        addList("come", "came", "come", "venir");
+        addList("cut","cut","cut","couper");
         addList("do", "did", "done", "faire");
         addList("draw", "drew", "drawn", "dessiner");
         addList("drive", "drove", "driven", "conduire");
@@ -89,7 +86,7 @@ public class ListActivity extends AppCompatActivity {
     }
 
     protected void addList(String infinitive,String preterite,String participle,String translate){
-        map = new HashMap<String, String>();
+        map = new HashMap<>();
         map.put("infinitive", infinitive);
         map.put("preterite", preterite);
         map.put("pastParticiple", participle);
@@ -114,8 +111,7 @@ public class ListActivity extends AppCompatActivity {
         catch (Exception e){
             e.printStackTrace();
         }
-    };
-
+    }
     private View.OnClickListener cancel = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

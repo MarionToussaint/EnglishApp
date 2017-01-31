@@ -2,14 +2,9 @@ package com.example.mmtou.englishapp;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.renderscript.ScriptGroup;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -46,8 +41,8 @@ public class Level1EasyActivity extends AppCompatActivity {
         level = (TextView) findViewById(R.id.level1);
         easy = (TextView) findViewById(R.id.hard);
         verb = (TextView) findViewById(R.id.verb);
-        p1 = (EditText) findViewById(R.id.infinitive3);
-        pp1 = (EditText) findViewById(R.id.preterite3);
+        p1 = (EditText) findViewById(R.id.inf2);
+        pp1 = (EditText) findViewById(R.id.p2);
         btn = (Button) findViewById(R.id.btnVerify);
         correct = (TextView) findViewById(R.id.correct1);
         retrn = (FloatingActionButton) findViewById(R.id.retrn);
@@ -63,7 +58,7 @@ public class Level1EasyActivity extends AppCompatActivity {
 
                 byes.setOnClickListener(new View.OnClickListener(){
                     public void onClick(View v){
-                        startActivity(new Intent(Level1EasyActivity.this,FirstScreenActivity.class));
+                        startActivity(new Intent(Level1EasyActivity.this,EasyActivity.class));
                     }
                 });
                 bno.setOnClickListener(new View.OnClickListener() {
@@ -110,30 +105,30 @@ public class Level1EasyActivity extends AppCompatActivity {
                 break;
             case 4:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][0]);
+                verb.setText(ListVerb.listLevel4[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.listLevel4,i);
                         i++;
                     }
                 });
                 break;
             case 5:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][0]);
+                verb.setText(ListVerb.listLevel5[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.listLevel5,i);
                         i++;
                     }
                 });
                 break;
             case 6:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][0]);
+                verb.setText(ListVerb.listLevel6[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.listLevel6,i);
                         i++;
                     }
                 });
@@ -150,20 +145,20 @@ public class Level1EasyActivity extends AppCompatActivity {
                 break;
             case 8:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][0]);
+                verb.setText(ListVerb.listLevel8[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.listLevel8,i);
                         i++;
                     }
                 });
                 break;
             case 9:
                 level.setText("LEVEL " + EasyActivity.numLevel);
-                verb.setText(ListVerb.listLevel3[i][0]);
+                verb.setText(ListVerb.listLevel9[i][0]);
                 btn.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
-                        exercise(ListVerb.listLevel3,i);
+                        exercise(ListVerb.listLevel9,i);
                         i++;
                     }
                 });
@@ -204,7 +199,7 @@ public class Level1EasyActivity extends AppCompatActivity {
         try {
             LayoutInflater inflater = (LayoutInflater) Level1EasyActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.pop, (ViewGroup) findViewById(R.id.pop1));
-            pw = new PopupWindow(layout, 600, 350, true);
+            pw = new PopupWindow(layout, 800, 400, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
             ((TextView) pw.getContentView().findViewById(R.id.correct1)).setText(correction);
             Button close = (Button) layout.findViewById(R.id.button2);
@@ -220,7 +215,7 @@ public class Level1EasyActivity extends AppCompatActivity {
         public void onClick(View v) {
             pw.dismiss();
             if (i == ListVerb.listLevel1.length) {
-                if (EasyActivity.numLevel != 3) {
+                if (EasyActivity.numLevel != 10) {
                     startActivity(new Intent(Level1EasyActivity.this, ScoreActivity.class));
                 } else {
                     startActivity(new Intent(Level1EasyActivity.this, ScoreFinalActivity.class));

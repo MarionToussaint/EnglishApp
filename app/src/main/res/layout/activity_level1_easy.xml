@@ -30,8 +30,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/infinitive3"
-        android:id="@+id/preterite3"
+        android:layout_below="@+id/inf2"
+        android:id="@+id/p2"
         android:hint="Past Participle"
         android:textColor="@color/darkblue"
         android:textColorLink="@color/white"
@@ -55,7 +55,7 @@
         android:textAlignment="center"
         android:textSize="16sp"
         android:background="@color/darkblue"
-        android:layout_below="@+id/preterite3"
+        android:layout_below="@+id/p2"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="6"
-        android:id="@+id/infinitive3"
+        android:id="@+id/inf2"
         android:hint="Preterite"
         android:textColorLink="@color/white"
         android:textColorHint="@color/darkblue"
