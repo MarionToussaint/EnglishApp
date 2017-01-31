@@ -26,7 +26,7 @@ public class ScoreActivity extends AppCompatActivity {
             point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(10));
         }
         else {
-            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(15));
+            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(13));
         }
 
 

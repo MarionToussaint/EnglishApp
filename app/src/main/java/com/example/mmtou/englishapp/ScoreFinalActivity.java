@@ -20,8 +20,12 @@ public class ScoreFinalActivity extends AppCompatActivity {
         score = (TextView) findViewById(R.id.score);
         point = (TextView) findViewById(R.id.point);
         menu = (Button) findViewById(R.id.menu);
-        point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(10));
-
+        if (FirstScreenActivity.difficulty == 1){
+            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(10));
+        }
+        else {
+            point.setText(Integer.toString(Level1EasyActivity.point) + " / " + Integer.toString(13));
+        }
         menu.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(ScoreFinalActivity.this, FirstScreenActivity.class));

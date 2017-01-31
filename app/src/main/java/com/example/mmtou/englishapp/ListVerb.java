@@ -131,7 +131,11 @@ public class ListVerb {
     };
 
     public static String[][] list2Level6 = new String[][]{
-
+            {"forbid"},{"forget"},
+            {"forgive"}, {"breed"},
+            {"quit"},{"shoot"},
+            {"wed"},{"mistake"},
+            {"misunderstand"},{"prove"}
     };
 
     public ListVerb(){
